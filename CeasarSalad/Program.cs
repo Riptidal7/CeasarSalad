@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
 
-        while (true)
+         while (true)
         {
             Console.Write("Enter a string to encode (or type 'quit' to exit): ");
             string input = Console.ReadLine();
