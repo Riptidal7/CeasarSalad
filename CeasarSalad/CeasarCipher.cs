@@ -4,13 +4,7 @@ public class CeasarCipher
 {
     public static string Encode(string message, int shift)
     {
-        string result = "";
-        foreach (char c in message)
-        {
-            char shifted = (char)(c + shift);
-            result += shifted;
-        }
-        return result;
+        return (Shift(message, +shift));
     }
 
     //@daisy

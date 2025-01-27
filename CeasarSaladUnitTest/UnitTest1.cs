@@ -8,8 +8,27 @@ public class UnitTest1
     [InlineData("Hello", 3, "Khoor")]
     [InlineData("Hello", -3, "Ebiil")]
     [InlineData("Xyz", 3, "Abc")]
+    [InlineData("Hey there", 3, "Khb wkhuh")]
+    [InlineData("     Hey there ", 3, "     Khb wkhuh ")]
+    [InlineData("Hello", 100000, "Lipps")]
+    [InlineData("Hello 23", 100000, "Lipps 23")]
+    [InlineData("", 2, "")]
     public void Test1(string input, int shift, string encoded)
     {
         Assert.Equal(encoded, CeasarCipher.Encode(input, shift));
+    }
+
+    [Theory]
+    [InlineData("Khoor", 3, "Hello")]
+    [InlineData("Ebiil", -3, "Hello")]
+    [InlineData("Abc", 3, "Xyz")]
+    [InlineData("Khb wkhuh", 3, "Hey there")]
+    [InlineData("     Khb wkhuh ", 3, "     Hey there ")]
+    [InlineData("Lipps", 100000, "Hello")]
+    [InlineData("Lipps 23", 100000, "Hello 23")]
+    [InlineData("", 2, "")]
+    public void Test2(string input, int shift, string decoded)
+    {
+        Assert.Equal(decoded, CeasarCipher.Decode(input, shift));
     }
 }
