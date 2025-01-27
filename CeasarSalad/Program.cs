@@ -28,9 +28,9 @@ class Program
                     Console.WriteLine("Invalid input. Please enter a valid integer.");
             }
 
-            string encoded = CeasarSalad.Encode(input, shift);
+            string encoded = CeasarCipher.Encode(input, shift);
             Console.WriteLine($"Encoded string: {encoded}");
-            string decoded = CeasarSalad.Decode(encoded, shift);
+            string decoded = CeasarCipher.Decode(encoded, shift);
             Console.WriteLine($"Decoded string: {decoded}");
         }
     }
