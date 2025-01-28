@@ -31,4 +31,13 @@ public class UnitTest1
     {
         Assert.Equal(decoded, CeasarCipher.Decode(input, shift));
     }
+
+    [Theory]
+    [InlineData("Xli ibxirhih evq wepyxmrk kiwxyvi aew eppikih xs fi fewih sr er ergmirx Vsqer", "The extended arm saluting gesture was alleged to be based on an ancient Roman")]
+
+    public void Test3(string input, string cracked)
+    {
+        Assert.Equal(cracked, CeasarCipher.Crack(input));
+    }
+
 }
